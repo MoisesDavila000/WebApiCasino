@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ZdMIF4vJb0ngRSpaUTv+DMDrWDLdhShuhRafeFvCuwo=",
+  "Source": "WebApiCasino",
+  "BasePath": "_content/WebApiCasino",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApiCasino\\wwwroot",
+      "Source": "WebApiCasino",
+      "ContentRoot": "D:\\VS repos\\WebApiCasino\\wwwroot\\",
+      "BasePath": "_content/WebApiCasino",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\VS repos\\WebApiCasino\\wwwroot\\Casino.txt",
+      "SourceId": "WebApiCasino",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS repos\\WebApiCasino\\wwwroot\\",
+      "BasePath": "_content/WebApiCasino",
+      "RelativePath": "Casino.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Casino.txt"
+    }
+  ]
+}
