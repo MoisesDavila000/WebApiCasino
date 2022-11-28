@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApiCasino.DTOs;
 using WebApiCasino.Entidades;
+using WebApiCasino.Filtros;
 
 namespace WebApiCasino.Controllers
 {
@@ -23,52 +25,29 @@ namespace WebApiCasino.Controllers
             this.mapper = mapper;
         }
 
-
-        [HttpGet]
-        public async Task<ActionResult<List<CartasLoteMex>>> Get()
-        {
-            return await dbContext.Cartas.ToListAsync();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> Post(CartasLoteMex cartas)
-        {
-            dbContext.Add(cartas);
-            await dbContext.SaveChangesAsync();
-            return Ok();
-        }
-
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(CartasLoteMex cartas, int id)
-        {
-            if (cartas.Id != id)
-            {
-                return BadRequest();
-            }
-
-            dbContext.Update(cartas);
-
-            await dbContext.SaveChangesAsync();
-            return Ok();
-        }
-
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        [HttpGet("Cartas_Por_Rifa/{id:int}/{nombreRifa}")]
+        public async Task<ActionResult<List<GETCartasDTO>>> GetById(int id, string nombreRifa)
         {
 
-            var existe = await dbContext.Cartas.AnyAsync(x => x.Id == id);
+            var existe = await dbContext.Rifas.AnyAsync(x => x.Id == id && x.Nombre == nombreRifa);
+
             if (!existe)
             {
-                return NotFound();
+                return BadRequest("No existe la rifa a la que se desea acceder");
             }
-
-            dbContext.Remove(new CartasLoteMex()
+            
+            var cartas = await dbContext.Cartas.ToListAsync();
+            var borrar = await dbContext.Cartas.ToListAsync();
+            var relaciones = await dbContext.ParticipantesRifasCartas.Where(c => c.IdRifa == id.ToString()).ToListAsync();
+            foreach (var i in relaciones)
             {
-                Id = id
-            });
-
-            await dbContext.SaveChangesAsync();
-            return Ok();
+                int num = Int32.Parse(i.IdCarta);
+                num = num - 1;
+                cartas.Remove(borrar[num]);
+            }
+            logger.LogInformation("Se obtiene el listado de participantes.");
+            return mapper.Map<List<GETCartasDTO>>(cartas);
         }
+
     }
 }

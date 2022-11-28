@@ -12,10 +12,14 @@ namespace WebApiCasino.Utilidades
             CreateMap<CreacionParticipanteDTO, Participantes>();
             CreateMap<Participantes, GETParticipantesDTO>();
 
+            CreateMap<Participantes, ParticipanteDTOconCartas>()
+                .ForMember(participante => participante.ListaDeCartas, opciones => opciones.MapFrom(MapParticipanteCarta))
+                .ForMember(participante => participante.ListaDeRifas, opciones => opciones.MapFrom(MapParticipanteRifa));
+
             //Rifas
 
-            CreateMap<CreacionRifaDTO, Rifas>()
-                .ForMember(rifa => rifa.Premios, opciones => opciones.MapFrom(MapCreacionRifa));
+            CreateMap<CreacionRifaDTO, Rifas>();
+            CreateMap<Rifas, GETRifasDTO>();
 
             CreateMap<Rifas, RifaconPremiosDTO>()
                 .ForMember(rifa => rifa.PremiosDTO, opciones => opciones.MapFrom(MapRifaPremio));
@@ -27,11 +31,52 @@ namespace WebApiCasino.Utilidades
 
             CreateMap<CreacionPremioDTO, Premios>();
             CreateMap<Premios, GETPremiosDTO>();
+            CreateMap<GETPremiosDTO, Premios>();
 
             //Cartas
             CreateMap<CreacionCartaDTO, CartasLoteMex>();
             CreateMap<CartasLoteMex, GETCartasDTO>();
 
+            //Extras
+            CreateMap<ParticipantePatchDTO, Participantes>().ReverseMap();
+            CreateMap<ParticipantesRifasCartas, ParticipantesCartasRifaDTO>();
+
+        }
+
+        private List<GETCartasDTO> MapParticipanteCarta(Participantes participantes, GETParticipantesDTO getParticipantesDTO)
+        {
+            var resultado = new List<GETCartasDTO>();
+
+            if (participantes.ParticipantesRifasCartas == null) { return resultado; }
+
+            foreach (var partiCarta in participantes.ParticipantesRifasCartas)
+            {
+                resultado.Add(new GETCartasDTO()
+                {
+                    Nombre = partiCarta.Carta.Nombre,
+                    NumLoteria = partiCarta.Carta.NumLoteria
+                });
+            }
+
+            return resultado;
+        }
+
+        private List<GETRifasDTO> MapParticipanteRifa(Participantes participantes, GETParticipantesDTO getParticipantesDTO)
+        {
+            var resultado = new List<GETRifasDTO>();
+
+            if (participantes.ParticipantesRifasCartas == null) { return resultado; }
+
+            foreach (var partiCarta in participantes.ParticipantesRifasCartas)
+            {
+                resultado.Add(new GETRifasDTO()
+                {
+                    Nombre = partiCarta.Rifa.Nombre,
+                    FechaRifa = partiCarta.Rifa.FechaRifa
+                });
+            }
+
+            return resultado;
         }
 
         private List<GETPremiosDTO> MapRifaPremio(Rifas rifa, RifaconPremiosDTO rifaconPremiosDTO)
@@ -71,24 +116,24 @@ namespace WebApiCasino.Utilidades
             return resultado;
         }
 
-        private List<Premios> MapCreacionRifa(CreacionRifaDTO creacionRifaDTO, Rifas rifa)
-        {
-            var resultado = new List<Premios>();
+        //private List<Premios> MapCreacionRifa(CreacionRifaDTO creacionRifaDTO, Rifas rifa)
+        //{
+        //    var resultado = new List<Premios>();
 
-            if (creacionRifaDTO.Premios == null) { return resultado; }
+        //    if (creacionRifaDTO.Premios == null) { return resultado; }
 
-            foreach (var i in creacionRifaDTO.Premios)
-            {
-                resultado.Add(new Premios()
-                {
-                    RifaId = rifa.Id,
-                    Nombre = i.Nombre,
-                    Nivel = i.Nivel
+        //    foreach (var i in creacionRifaDTO.Premios)
+        //    {
+        //        resultado.Add(new Premios()
+        //        {
+        //            RifaId = rifa.Id,
+        //            Nombre = i.Nombre,
+        //            Nivel = i.Nivel
 
-                });
-            }
+        //        });
+        //    }
 
-            return resultado;
-        }
+        //    return resultado;
+        //}
     }
 }

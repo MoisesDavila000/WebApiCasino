@@ -5,9 +5,9 @@ namespace WebApiCasino.DTOs
 {
     public class GETRifasDTO
     {
-
+        public int Id { get; set; }
         public string Nombre { get; set; }
 
-        public DateTime FechaRifa { get; set; }
+        public string FechaRifa { get; set; }
     }
 }

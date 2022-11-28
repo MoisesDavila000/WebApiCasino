@@ -9,9 +9,8 @@ namespace WebApiCasino.DTOs
         [Required(ErrorMessage = "El campo de nombre es requerido")]
         [NombresConMayuscula]
         public string Nombre { get; set; }
-        //[Required]
-        //public DateTime FechaRifa { get; set; }
+        [Required]
+        public string FechaRifa { get; set; }
 
-        public List<CreacionPremioDTO> Premios { get; set; }
     }
 }

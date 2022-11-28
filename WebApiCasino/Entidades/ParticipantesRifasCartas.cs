@@ -9,8 +9,6 @@
 
         public string IdCarta { get; set; }
 
-        public int Orden { get; set; }
-
         public Participantes Participante { get; set; }
 
         public Rifas Rifa { get; set;  }

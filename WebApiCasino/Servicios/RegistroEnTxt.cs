@@ -28,6 +28,13 @@
             return Task.CompletedTask;
         }
 
+        public void EscribirExt(string msg)
+        {
+            var ruta = $@"{env.ContentRootPath}\wwwroot\{nombreArchivo}";
+
+            using (StreamWriter writer = new StreamWriter(ruta, append: true)) { writer.WriteLine(msg); }
+        }
+
         private void DoWork(object state)
         {
             Escribir("Proceso en ejecucion: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));

@@ -1,69 +1,143 @@
 ﻿Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 07:30:29
-Proceso en ejecucion: 26/11/2022 07:31:29
+Proceso en ejecucion: 27/11/2022 11:24:10
+Proceso en ejecucion: 27/11/2022 11:25:10
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:02:52
-Proceso en ejecucion: 26/11/2022 08:03:52
-Proceso en ejecucion: 26/11/2022 08:04:52
+Proceso en ejecucion: 28/11/2022 12:00:50
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:08:32
-Proceso en ejecucion: 26/11/2022 08:09:32
+Proceso en ejecucion: 28/11/2022 12:18:07
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:10:57
+Proceso en ejecucion: 28/11/2022 12:21:35
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:17:11
+Proceso en ejecucion: 28/11/2022 12:50:07
+Proceso en ejecucion: 28/11/2022 12:51:07
+Proceso en ejecucion: 28/11/2022 12:52:07
+Proceso en ejecucion: 28/11/2022 12:53:07
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:18:14
+Proceso en ejecucion: 28/11/2022 01:07:52
+Proceso en ejecucion: 28/11/2022 01:08:52
+Proceso en ejecucion: 28/11/2022 01:09:52
+Proceso en ejecucion: 28/11/2022 01:10:52
+Proceso en ejecucion: 28/11/2022 01:11:52
+Proceso en ejecucion: 28/11/2022 01:12:52
+Proceso en ejecucion: 28/11/2022 01:13:52
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:22:30
+Proceso en ejecucion: 28/11/2022 01:15:45
+Proceso en ejecucion: 28/11/2022 01:16:45
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:26:02
-Proceso en ejecucion: 26/11/2022 08:27:02
-Proceso en ejecucion: 26/11/2022 08:28:02
+Proceso en ejecucion: 28/11/2022 01:28:11
+Proceso en ejecucion: 28/11/2022 01:29:11
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:28:31
-Proceso en ejecucion: 26/11/2022 08:29:31
+Proceso en ejecucion: 28/11/2022 12:31:53
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:32:53
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:40:12
+Proceso en ejecucion: 28/11/2022 12:34:34
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:35:34
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:36:34
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:37:34
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:44:09
+Proceso en ejecucion: 28/11/2022 12:37:54
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:38:54
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:44:35
+Proceso en ejecucion: 28/11/2022 12:45:17
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:46:17
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 08:45:39
-Proceso en ejecucion: 26/11/2022 08:46:39
+Proceso en ejecucion: 28/11/2022 12:47:37
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 28/11/2022 12:48:37
 Se inicio la aplicacion.
-Proceso en ejecucion: 26/11/2022 09:14:27
+Proceso en ejecucion: 28/11/2022 12:49:03
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 09:51:23
-Proceso en ejecucion: 27/11/2022 09:52:23
+Proceso en ejecucion: 28/11/2022 12:51:02
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:05:27
+Proceso en ejecucion: 28/11/2022 12:51:23
+Se realizara un registro nuevo.
+Proceso en ejecucion: 28/11/2022 12:52:23
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:06:00
+Proceso en ejecucion: 28/11/2022 12:54:29
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:15:04
+Proceso en ejecucion: 28/11/2022 12:57:57
+Proceso en ejecucion: 28/11/2022 12:58:57
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:19:59
+Proceso en ejecucion: 28/11/2022 02:30:16
+Proceso en ejecucion: 28/11/2022 02:31:16
+Proceso en ejecucion: 28/11/2022 02:32:16
+Proceso en ejecucion: 28/11/2022 02:33:16
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:22:13
+Proceso en ejecucion: 28/11/2022 02:34:28
+Proceso en ejecucion: 28/11/2022 02:35:28
+Proceso en ejecucion: 28/11/2022 02:36:28
+Proceso en ejecucion: 28/11/2022 02:37:28
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:22:52
-Proceso en ejecucion: 27/11/2022 10:23:52
+Proceso en ejecucion: 28/11/2022 02:42:00
+Proceso en ejecucion: 28/11/2022 02:43:00
+Proceso en ejecucion: 28/11/2022 02:44:00
+Proceso en ejecucion: 28/11/2022 02:45:00
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:46:00
+Proceso en ejecucion: 28/11/2022 02:46:35
+Proceso en ejecucion: 28/11/2022 02:47:35
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:47:26
-Proceso en ejecucion: 27/11/2022 10:48:26
-Proceso en ejecucion: 27/11/2022 10:49:26
-Proceso en ejecucion: 27/11/2022 10:50:26
+Proceso en ejecucion: 28/11/2022 02:53:27
+Proceso en ejecucion: 28/11/2022 02:54:27
+Proceso en ejecucion: 28/11/2022 02:55:27
+Proceso en ejecucion: 28/11/2022 02:56:27
+Proceso en ejecucion: 28/11/2022 02:57:27
+Proceso en ejecucion: 28/11/2022 02:58:27
+Proceso en ejecucion: 28/11/2022 02:59:27
+Proceso en ejecucion: 28/11/2022 03:00:27
+Proceso en ejecucion: 28/11/2022 03:01:27
+Proceso en ejecucion: 28/11/2022 03:02:27
+Proceso en ejecucion: 28/11/2022 03:03:27
+Proceso en ejecucion: 28/11/2022 03:04:27
+Proceso en ejecucion: 28/11/2022 03:05:27
+Proceso en ejecucion: 28/11/2022 03:06:27
+Proceso en ejecucion: 28/11/2022 03:07:27
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:51:31
-Proceso en ejecucion: 27/11/2022 10:52:31
+Proceso en ejecucion: 28/11/2022 03:08:56
+Proceso en ejecucion: 28/11/2022 03:09:56
+Proceso en ejecucion: 28/11/2022 03:10:56
+Proceso en ejecucion: 28/11/2022 03:11:56
+Proceso en ejecucion: 28/11/2022 03:12:56
+Proceso en ejecucion: 28/11/2022 03:13:56
+Proceso en ejecucion: 28/11/2022 03:14:56
+Proceso en ejecucion: 28/11/2022 03:15:56
+Proceso en ejecucion: 28/11/2022 03:16:56
 Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:53:38
-Proceso en ejecucion: 27/11/2022 10:54:38
-Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 10:55:54
-Proceso en ejecucion: 27/11/2022 10:56:54
-Proceso en ejecucion: 27/11/2022 10:57:54
+Proceso en ejecucion: 28/11/2022 03:18:56
+Proceso en ejecucion: 28/11/2022 03:19:56

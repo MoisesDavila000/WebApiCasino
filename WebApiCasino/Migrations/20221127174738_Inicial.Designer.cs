@@ -12,7 +12,7 @@ using WebApiCasino;
 namespace WebApiCasino.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221127005538_Inicial")]
+    [Migration("20221127174738_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,25 +74,19 @@ namespace WebApiCasino.Migrations
 
             modelBuilder.Entity("WebApiCasino.Entidades.ParticipantesRifasCartas", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("IdParticipante")
+                        .HasColumnType("nvarchar(450)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("IdRifa")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdCarta")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("CartaId")
                         .HasColumnType("int");
 
-                    b.Property<string>("IdCarta")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdParticipante")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdRifa")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Orden")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<int?>("ParticipanteId")
@@ -101,7 +95,7 @@ namespace WebApiCasino.Migrations
                     b.Property<int?>("RifaId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdParticipante", "IdRifa", "IdCarta");
 
                     b.HasIndex("CartaId");
 

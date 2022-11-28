@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZdMIF4vJb0ngRSpaUTv+DMDrWDLdhShuhRafeFvCuwo=",
+  "Hash": "KuPUQlwaNlKiJqe4R8TeNaXrXcq4Glw0/BanPE29Aig=",
   "Source": "WebApiCasino",
   "BasePath": "_content/WebApiCasino",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebApiCasino\\wwwroot",
       "Source": "WebApiCasino",
-      "ContentRoot": "D:\\VS repos\\WebApiCasino\\wwwroot\\",
+      "ContentRoot": "D:\\VS repos\\Casino nuevo - copia\\Casino-PIADWBE\\WebApiCasino\\wwwroot\\",
       "BasePath": "_content/WebApiCasino",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\VS repos\\WebApiCasino\\wwwroot\\Casino.txt",
+      "Identity": "D:\\VS repos\\Casino nuevo - copia\\Casino-PIADWBE\\WebApiCasino\\wwwroot\\Casino.txt",
       "SourceId": "WebApiCasino",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\VS repos\\WebApiCasino\\wwwroot\\",
+      "ContentRoot": "D:\\VS repos\\Casino nuevo - copia\\Casino-PIADWBE\\WebApiCasino\\wwwroot\\",
       "BasePath": "_content/WebApiCasino",
       "RelativePath": "Casino.txt",
       "AssetKind": "All",

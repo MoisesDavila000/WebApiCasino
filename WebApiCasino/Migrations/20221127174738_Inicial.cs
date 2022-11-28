@@ -55,19 +55,17 @@ namespace WebApiCasino.Migrations
                 name: "ParticipantesRifasCartas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IdParticipante = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdRifa = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdCarta = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Orden = table.Column<int>(type: "int", nullable: false),
+                    IdParticipante = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdRifa = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdCarta = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     ParticipanteId = table.Column<int>(type: "int", nullable: true),
                     RifaId = table.Column<int>(type: "int", nullable: true),
                     CartaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ParticipantesRifasCartas", x => x.Id);
+                    table.PrimaryKey("PK_ParticipantesRifasCartas", x => new { x.IdParticipante, x.IdRifa, x.IdCarta });
                     table.ForeignKey(
                         name: "FK_ParticipantesRifasCartas_Cartas_CartaId",
                         column: x => x.CartaId,
@@ -91,7 +89,7 @@ namespace WebApiCasino.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<int>(type: "int", maxLength: 50, nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Nivel = table.Column<int>(type: "int", nullable: false),
                     RifaId = table.Column<int>(type: "int", nullable: false)
                 },

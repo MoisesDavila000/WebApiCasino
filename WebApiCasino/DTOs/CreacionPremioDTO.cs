@@ -8,11 +8,10 @@ namespace WebApiCasino.DTOs
         [Required(ErrorMessage = "El campo de nombre es requerido")]
         [StringLength(maximumLength: 50, ErrorMessage = "El campo de nombre no puede excede los 50 caracteres")]
         [NombresConMayuscula]
-        public int Nombre { get; set; }
+        public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El campo de nivel es requerido")]
         public int Nivel { get; set; }
 
-        public List<CreacionPremioDTO> premios { get; set; }
 }
 }

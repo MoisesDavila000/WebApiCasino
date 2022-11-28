@@ -1,13 +1,18 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiCasino.DTOs;
 using WebApiCasino.Entidades;
+using WebApiCasino.Filtros;
 
 namespace WebApiCasino.Controllers
 {
     [ApiController]
     [Route("Participantes")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class ParticipantesController: ControllerBase
     {
 
@@ -24,26 +29,8 @@ namespace WebApiCasino.Controllers
             this.mapper = mapper;
         }
 
-        //GET
-
-        [HttpGet]
-        public async Task<ActionResult<List<Participantes>>> GetPrueba()
-        {
-            return await dbContext.Participantes.ToListAsync();
-        }
-
-        [HttpGet("Listado_De_Participantes")]
-        //[AllowAnonymous]
-        public async Task<ActionResult<List<GETParticipantesDTO>>> Get()
-        {
-            /*Escribir en archivo*/
-            logger.LogInformation("Se obtiene el listado de participantes.");
-            var participantes = await dbContext.Participantes.ToListAsync();
-            return mapper.Map<List<GETParticipantesDTO>>(participantes);
-        }
-
         [HttpGet("(Datos_Del_Participante)/{id:int}", Name = "Datos_Del_Participante")]
-        public async Task<ActionResult<GETParticipantesDTO>> GetById(int id)
+        public async Task<ActionResult<GETParticipantesDTO>> GetById([FromRoute] int id)
         {
 
             var participante = await dbContext.Participantes.FirstOrDefaultAsync(x => x.Id == id);
@@ -53,53 +40,41 @@ namespace WebApiCasino.Controllers
                 return NotFound("No se encontro participante con ese id");
             }
 
-            /*Escribir en archivo*/
             logger.LogInformation("Se obtiene el registro de un participante.");
 
             return mapper.Map<GETParticipantesDTO>(participante);
         }
 
-        [HttpGet("(Participante_Con_Rifas)/{id:int}", Name = "Participante_Con_Rifa")]
-        public async Task<ActionResult<GETParticipantesDTO>> GetPartRif(int id)
+        [HttpGet("Inscripciones_Del_Participante/{id:int}", Name = "Inscripciones_Del_Participante")]
+        public async Task<ActionResult<ParticipanteDTOconCartas>> GetInscripcion([FromRoute] int id)
         {
+            var inscrip = await dbContext.ParticipantesRifasCartas.Where(x => x.IdParticipante == id.ToString()).ToListAsync();
+
             var participante = await dbContext.Participantes
                 .Include(participanteDB => participanteDB.ParticipantesRifasCartas)
-                .ThenInclude(participanteRifas => participanteRifas.Rifa)
+                .ThenInclude(participantesRifasCartasDB => participantesRifasCartasDB.Carta)
                 .Include(participanteDB => participanteDB.ParticipantesRifasCartas)
-                .ThenInclude(participanteCartas => participanteCartas.Carta)
-                .FirstOrDefaultAsync(x => x.Id == id);
-
+                .ThenInclude(participantesRifasCartasDB => participantesRifasCartasDB.Rifa)
+                .FirstOrDefaultAsync(participanteDB => participanteDB.Id == id);
+            
             if (participante == null)
             {
-                return NotFound("No se encontro participante con ese id");
+                logger.LogError("No se encuentra el participante con dicho id.");
+                return NotFound();
             }
-
-            participante.ParticipantesRifasCartas = participante.ParticipantesRifasCartas.OrderBy(x => x.Orden).ToList();
-            /*Escribir en archivo*/
-            logger.LogInformation("Se obtiene el registro de un participante.");
-
-            return mapper.Map<GETParticipantesDTO>(participante);
-
+            
+            return mapper.Map<ParticipanteDTOconCartas>(participante);
         }
 
-        //POST
-
-        [HttpPost]
-        public async Task<ActionResult> PostPrueba(Participantes participante)
-        {
-            dbContext.Add(participante);
-            await dbContext.SaveChangesAsync();
-            return Ok();
-        }
 
         [HttpPost("Crear_Participante")]
         public async Task<ActionResult> Post(CreacionParticipanteDTO creacionParticipanteDTO)
         {
-            var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Email == creacionParticipanteDTO.Email);
+            var existeCorreo = await dbContext.Participantes.AnyAsync(x => x.Email == creacionParticipanteDTO.Email);
 
-            if (existeParticipante)
+            if (existeCorreo)
             {
-                return BadRequest("Ya existe este participante");
+                return BadRequest("Ya existe este correo");
             }
 
             var newParticipante = mapper.Map<Participantes>(creacionParticipanteDTO);
@@ -107,10 +82,12 @@ namespace WebApiCasino.Controllers
 
             var partDTO = mapper.Map<GETParticipantesDTO>(newParticipante);
             await dbContext.SaveChangesAsync();
-            return Ok();
+
+            return CreatedAtRoute("Datos_Del_Participante", new { id = newParticipante.Id }, partDTO);
         }
 
-        [HttpPost("Comprar_Carta_De_Rifa/ Participante{idParticipante:int}/Rifa{idRifa:int}/Carta{idCarta:int}")]
+        [HttpPost("Comprar_Carta_De_Rifa/ Participante{idParticipante:int}/Rifa{idRifa:int}/Carta{NumLoteria:int}")]
+        [ServiceFilter(typeof(FiltroRegistro))]
         public async Task<ActionResult> PostRelacion(int idParticipante, int idRifa, int idCarta)
         {
             var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Id == idParticipante);
@@ -176,58 +153,73 @@ namespace WebApiCasino.Controllers
             }
         }
 
-        //PUT
 
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult> PutPrueba(Participantes participante, int id)
+        [HttpPatch("Modificar_Participante/{id:int}")]
+        [ServiceFilter(typeof(FiltroRegistro))]
+        public async Task<ActionResult> Patch2(int id, JsonPatchDocument<ParticipantePatchDTO> patchDocument)
         {
-            if(participante.Id != id)
+
+            if (patchDocument == null)
             {
                 return BadRequest();
             }
 
-            dbContext.Update(participante);
+            var participanteDB = await dbContext.Participantes.FirstOrDefaultAsync(x => x.Id == id);
 
+            if (participanteDB == null) { return NotFound(); }
+
+            var participanteDTO = mapper.Map<ParticipantePatchDTO>(participanteDB);
+
+            patchDocument.ApplyTo(participanteDTO);
+
+            var isValid = TryValidateModel(participanteDTO);
+
+            if (!isValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            mapper.Map(participanteDTO, participanteDB);
             await dbContext.SaveChangesAsync();
+
             return Ok();
+
         }
 
-        [HttpPut("Modificar_Participante/{id:int}")]
-        public async Task<ActionResult> Put(CreacionParticipanteDTO creacionParticipanteDTO, int id)
+
+        [HttpDelete("Eliminar_Inscripcion/Participante{idParticipante:int}/Rifa{idRifa:int}/Carta{NumLoteria:int}")]
+        public async Task<ActionResult> DeleteRelacion(int idParticipante, int idRifa, int idCarta)
         {
-            var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Id == id);
+            var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Id == idParticipante);
 
             if (!existeParticipante)
             {
-                return BadRequest("El participante no existe");
+                return NotFound("No se encontro un participante con ese Id");
             }
 
-            var participante = mapper.Map<Participantes>(creacionParticipanteDTO);
-            participante.Id = id;
+            var existeRifa = await dbContext.Rifas.AnyAsync(x => x.Id == idRifa);
 
-            dbContext.Update(participante);
-            await dbContext.SaveChangesAsync();
-            return Ok();
-        }
-
-        //DELETE
-
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-
-            var existe = await dbContext.Participantes.AnyAsync(x => x.Id == id);
-            if (!existe)
+            if (!existeRifa)
             {
-                return NotFound();
+                return NotFound("No se encontro una rifa con ese Id");
             }
 
-            dbContext.Remove(new Participantes()
+            var existeCarta = await dbContext.Cartas.AnyAsync(x => x.Id == idCarta);
+
+            if (!existeCarta)
             {
-                Id = id
+                return NotFound("No se encontro un carta con ese Id");
+            }
+
+            dbContext.Remove(new ParticipantesRifasCartas
+            {
+                IdParticipante = idParticipante.ToString(),
+                IdRifa = idRifa.ToString(),
+                IdCarta = idCarta.ToString()
             });
 
             await dbContext.SaveChangesAsync();
+
             return Ok();
         }
     }
