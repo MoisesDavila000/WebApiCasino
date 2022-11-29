@@ -27,22 +27,6 @@ namespace WebApiCasino.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet("Premios_Por_Rifa/{id:int}", Name = "Premios_Por_Rifa")]
-        public async Task<ActionResult<List<GETPremiosDTO>>> GetById([FromRoute] int id)
-        {
-            var existeRifa = await dbContext.Rifas.AnyAsync(rifaid => rifaid.Id == id);
-
-            if (!existeRifa)
-            {
-                return NotFound();
-            }
-
-            var premios = await dbContext.Premios.Where(rifaDB => rifaDB.RifaId == id).ToListAsync();
-
-            logger.LogInformation("Se obtiene el listado de los premios de una rifa.");
-            return mapper.Map<List<GETPremiosDTO>>(premios);
-        }
-
         [HttpPost("Crear_Premio/{rifaId:int}")]
         [ServiceFilter(typeof(FiltroRegistro))]
         public async Task<ActionResult> Post(int rifaId, CreacionPremioDTO creacionPremioDTO)
@@ -77,7 +61,7 @@ namespace WebApiCasino.Controllers
 
             var getPremioDTO = mapper.Map<GETPremiosDTO>(premio);
 
-            return CreatedAtRoute("Premios_Por_Rifa", new { id = premio.Id, RifaId = rifaId }, getPremioDTO);
+            return NoContent();
 
         }
 
@@ -110,7 +94,7 @@ namespace WebApiCasino.Controllers
 
         }
 
-        [HttpDelete("Eliminar_Rifa/{id:int}/{rifaId:int}")]
+        [HttpDelete("Eliminar_Premio/{id:int}/{rifaId:int}")]
         [ServiceFilter(typeof(FiltroRegistro))]
         public async Task<ActionResult> Delete(int id, int rifaId)
         {

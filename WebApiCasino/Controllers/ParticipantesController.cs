@@ -62,8 +62,37 @@ namespace WebApiCasino.Controllers
                 logger.LogError("No se encuentra el participante con dicho id.");
                 return NotFound();
             }
+            List<GETCartasDTO> listacartas = new List<GETCartasDTO>();
+            List<GETRifasDTO> listarifa = new List<GETRifasDTO>();
+
+            foreach (var i in participante.ParticipantesRifasCartas)
+            {
+                listacartas.Add(new GETCartasDTO
+                {
+                    Nombre = i.Carta.Nombre,
+                    NumLoteria = i.Carta.NumLoteria
+                });
+
+                listarifa.Add(new GETRifasDTO
+                {
+                    Id = Int32.Parse(i.IdRifa),
+                    Nombre = i.Rifa.Nombre,
+                    FechaRifa = i.Rifa.FechaRifa
+                });
+            }
             
-            return mapper.Map<ParticipanteDTOconCartas>(participante);
+            var inscripciones = new ParticipanteDTOconCartas()
+            {
+                Id = participante.Id,
+                Nombre = participante.Nombre,
+                Email = participante.Email,
+                Telefono = participante.Telefono,
+                ListaDeCartas = listacartas,
+                ListaDeRifas = listarifa
+
+            };
+
+            return mapper.Map<ParticipanteDTOconCartas>(inscripciones);
         }
 
 
@@ -77,18 +106,21 @@ namespace WebApiCasino.Controllers
                 return BadRequest("Ya existe este correo");
             }
 
+
             var newParticipante = mapper.Map<Participantes>(creacionParticipanteDTO);
             dbContext.Add(newParticipante);
 
             var partDTO = mapper.Map<GETParticipantesDTO>(newParticipante);
             await dbContext.SaveChangesAsync();
 
-            return CreatedAtRoute("Datos_Del_Participante", new { id = newParticipante.Id }, partDTO);
+            var creado = await dbContext.Participantes.FirstOrDefaultAsync(participanteDB => participanteDB.Email == creacionParticipanteDTO.Email);
+            partDTO.Id = creado.Id;
+            return CreatedAtRoute("Datos_Del_Participante", new { Id = creado.Id }, partDTO);
         }
 
         [HttpPost("Comprar_Carta_De_Rifa/ Participante{idParticipante:int}/Rifa{idRifa:int}/Carta{NumLoteria:int}")]
         [ServiceFilter(typeof(FiltroRegistro))]
-        public async Task<ActionResult> PostRelacion(int idParticipante, int idRifa, int idCarta)
+        public async Task<ActionResult> PostRelacion(int idParticipante, int idRifa, int NumLoteria)
         {
             var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Id == idParticipante);
 
@@ -104,7 +136,7 @@ namespace WebApiCasino.Controllers
                 return NotFound("No se encontro una rifa con ese Id");
             }
 
-            var existeCarta = await dbContext.Cartas.AnyAsync(x => x.Id == idCarta);
+            var existeCarta = await dbContext.Cartas.AnyAsync(x => x.Id == NumLoteria);
 
             if (!existeCarta)
             {
@@ -113,7 +145,7 @@ namespace WebApiCasino.Controllers
 
             try
             {
-                var relacion = await dbContext.ParticipantesRifasCartas.SingleAsync(x => x.IdParticipante == idParticipante.ToString() && x.IdRifa == idRifa.ToString() && x.IdCarta == idCarta.ToString());
+                var relacion = await dbContext.ParticipantesRifasCartas.SingleAsync(x => x.IdParticipante == idParticipante.ToString() && x.IdRifa == idRifa.ToString() && x.IdCarta == NumLoteria.ToString());
                 return BadRequest("Ya existe la relacion.");
             }
             catch
@@ -125,21 +157,21 @@ namespace WebApiCasino.Controllers
                     return BadRequest("No hay lugar disponible en la rifa");
                 }
 
-                var cartaUsada = await dbContext.ParticipantesRifasCartas.AnyAsync(x => x.IdRifa == idRifa.ToString() && x.IdCarta == idCarta.ToString());
+                var cartaUsada = await dbContext.ParticipantesRifasCartas.AnyAsync(x => x.IdRifa == idRifa.ToString() && x.IdCarta == NumLoteria.ToString());
 
                 if (cartaUsada)
                 {
                     return BadRequest("La carta ya esta siendo usada en esta rifa");
                 }
 
-                var carta = await dbContext.Cartas.FirstAsync(x => x.Id == idCarta);
+                var carta = await dbContext.Cartas.FirstAsync(x => x.Id == NumLoteria);
                 var rifa = await dbContext.Rifas.FirstAsync(x => x.Id == idRifa);
                 var participante = await dbContext.Participantes.FirstAsync(x => x.Id == idParticipante);
                 var nuevaRelacion = new ParticipantesRifasCartas()
                 {
                     IdParticipante = idParticipante.ToString(),
                     IdRifa = idRifa.ToString(),
-                    IdCarta = idCarta.ToString(),
+                    IdCarta = NumLoteria.ToString(),
                     Participante = participante,
                     Rifa = rifa,
                     Carta = carta
@@ -188,7 +220,7 @@ namespace WebApiCasino.Controllers
 
 
         [HttpDelete("Eliminar_Inscripcion/Participante{idParticipante:int}/Rifa{idRifa:int}/Carta{NumLoteria:int}")]
-        public async Task<ActionResult> DeleteRelacion(int idParticipante, int idRifa, int idCarta)
+        public async Task<ActionResult> DeleteRelacion(int idParticipante, int idRifa, int NumLoteria)
         {
             var existeParticipante = await dbContext.Participantes.AnyAsync(x => x.Id == idParticipante);
 
@@ -204,7 +236,7 @@ namespace WebApiCasino.Controllers
                 return NotFound("No se encontro una rifa con ese Id");
             }
 
-            var existeCarta = await dbContext.Cartas.AnyAsync(x => x.Id == idCarta);
+            var existeCarta = await dbContext.Cartas.AnyAsync(x => x.Id == NumLoteria);
 
             if (!existeCarta)
             {
@@ -215,7 +247,7 @@ namespace WebApiCasino.Controllers
             {
                 IdParticipante = idParticipante.ToString(),
                 IdRifa = idRifa.ToString(),
-                IdCarta = idCarta.ToString()
+                IdCarta = NumLoteria.ToString()
             });
 
             await dbContext.SaveChangesAsync();

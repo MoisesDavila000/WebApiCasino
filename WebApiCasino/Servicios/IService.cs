@@ -39,7 +39,6 @@ namespace WebApiCasino.Servicios
 
                 lista.Add(cartasUsadas[index]);
                 repetir.Add(index);
-                //Cartas.Remove(Cartas[indice]);
             }
 
             return (lista);

@@ -1,143 +1,190 @@
 ﻿Se inicio la aplicacion.
-Proceso en ejecucion: 27/11/2022 11:24:10
-Proceso en ejecucion: 27/11/2022 11:25:10
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:00:50
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:18:07
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:21:35
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:50:07
-Proceso en ejecucion: 28/11/2022 12:51:07
-Proceso en ejecucion: 28/11/2022 12:52:07
-Proceso en ejecucion: 28/11/2022 12:53:07
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 01:07:52
-Proceso en ejecucion: 28/11/2022 01:08:52
-Proceso en ejecucion: 28/11/2022 01:09:52
-Proceso en ejecucion: 28/11/2022 01:10:52
-Proceso en ejecucion: 28/11/2022 01:11:52
-Proceso en ejecucion: 28/11/2022 01:12:52
-Proceso en ejecucion: 28/11/2022 01:13:52
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 01:15:45
-Proceso en ejecucion: 28/11/2022 01:16:45
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 01:28:11
-Proceso en ejecucion: 28/11/2022 01:29:11
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:31:53
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:32:53
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:34:34
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:35:34
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:36:34
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:37:34
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:37:54
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:38:54
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:45:17
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:46:17
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:47:37
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Proceso en ejecucion: 28/11/2022 12:48:37
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:49:03
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:51:02
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:51:23
-Se realizara un registro nuevo.
-Proceso en ejecucion: 28/11/2022 12:52:23
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:54:29
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 12:57:57
-Proceso en ejecucion: 28/11/2022 12:58:57
-Se realizara un registro nuevo.
-Se realizo un registro de manera exitosa.
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 02:30:16
-Proceso en ejecucion: 28/11/2022 02:31:16
-Proceso en ejecucion: 28/11/2022 02:32:16
-Proceso en ejecucion: 28/11/2022 02:33:16
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 02:34:28
-Proceso en ejecucion: 28/11/2022 02:35:28
-Proceso en ejecucion: 28/11/2022 02:36:28
-Proceso en ejecucion: 28/11/2022 02:37:28
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 02:42:00
-Proceso en ejecucion: 28/11/2022 02:43:00
-Proceso en ejecucion: 28/11/2022 02:44:00
-Proceso en ejecucion: 28/11/2022 02:45:00
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 02:46:35
-Proceso en ejecucion: 28/11/2022 02:47:35
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 02:53:27
-Proceso en ejecucion: 28/11/2022 02:54:27
-Proceso en ejecucion: 28/11/2022 02:55:27
-Proceso en ejecucion: 28/11/2022 02:56:27
-Proceso en ejecucion: 28/11/2022 02:57:27
-Proceso en ejecucion: 28/11/2022 02:58:27
-Proceso en ejecucion: 28/11/2022 02:59:27
-Proceso en ejecucion: 28/11/2022 03:00:27
-Proceso en ejecucion: 28/11/2022 03:01:27
-Proceso en ejecucion: 28/11/2022 03:02:27
-Proceso en ejecucion: 28/11/2022 03:03:27
-Proceso en ejecucion: 28/11/2022 03:04:27
-Proceso en ejecucion: 28/11/2022 03:05:27
-Proceso en ejecucion: 28/11/2022 03:06:27
-Proceso en ejecucion: 28/11/2022 03:07:27
-Se inicio la aplicacion.
-Proceso en ejecucion: 28/11/2022 03:08:56
-Proceso en ejecucion: 28/11/2022 03:09:56
-Proceso en ejecucion: 28/11/2022 03:10:56
-Proceso en ejecucion: 28/11/2022 03:11:56
-Proceso en ejecucion: 28/11/2022 03:12:56
-Proceso en ejecucion: 28/11/2022 03:13:56
-Proceso en ejecucion: 28/11/2022 03:14:56
-Proceso en ejecucion: 28/11/2022 03:15:56
-Proceso en ejecucion: 28/11/2022 03:16:56
-Se inicio la aplicacion.
 Proceso en ejecucion: 28/11/2022 03:18:56
 Proceso en ejecucion: 28/11/2022 03:19:56
+Se inicio la aplicacion.
+Proceso en ejecucion: 28/11/2022 10:02:13
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:05:44
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:14:35
+Proceso en ejecucion: 29/11/2022 02:15:35
+Proceso en ejecucion: 29/11/2022 02:16:35
+Proceso en ejecucion: 29/11/2022 02:17:35
+Proceso en ejecucion: 29/11/2022 02:18:35
+Proceso en ejecucion: 29/11/2022 02:19:35
+Proceso en ejecucion: 29/11/2022 02:20:35
+Proceso en ejecucion: 29/11/2022 02:21:35
+Proceso en ejecucion: 29/11/2022 02:22:35
+Proceso en ejecucion: 29/11/2022 02:23:35
+Proceso en ejecucion: 29/11/2022 02:24:35
+Proceso en ejecucion: 29/11/2022 02:25:35
+Proceso en ejecucion: 29/11/2022 02:26:35
+Proceso en ejecucion: 29/11/2022 02:27:35
+Proceso en ejecucion: 29/11/2022 02:28:35
+Proceso en ejecucion: 29/11/2022 02:29:35
+Proceso en ejecucion: 29/11/2022 02:30:35
+Proceso en ejecucion: 29/11/2022 02:31:35
+Proceso en ejecucion: 29/11/2022 02:32:35
+Proceso en ejecucion: 29/11/2022 02:33:35
+Proceso en ejecucion: 29/11/2022 02:34:35
+Proceso en ejecucion: 29/11/2022 02:35:35
+Proceso en ejecucion: 29/11/2022 02:36:35
+Proceso en ejecucion: 29/11/2022 02:37:35
+Proceso en ejecucion: 29/11/2022 02:38:35
+Proceso en ejecucion: 29/11/2022 02:39:35
+Proceso en ejecucion: 29/11/2022 02:40:35
+Proceso en ejecucion: 29/11/2022 02:41:35
+Proceso en ejecucion: 29/11/2022 02:42:35
+Proceso en ejecucion: 29/11/2022 02:43:35
+Rifa: Rifa Navideña | Ganador: Asier Vela
+ | Premio: Tarjeta Amazon Nivel: 4
+Rifa: Rifa Navideña | Ganador: Daniela Canto
+ | Premio: Audifonos Nivel: 3
+Rifa: Rifa Navideña | Ganador: Tamara Giraldo
+ | Premio: Bocina Nivel: 2
+Rifa: Rifa Navideña | Ganador: Izan Urbano
+ | Premio: Celular Nivel: 1
+Proceso en ejecucion: 29/11/2022 02:44:35
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:45:34
+Rifa: Rifa Navideña | Ganador: Izan Urbano
+ | Premio: Tarjeta Amazon Nivel: 4
+Rifa: Rifa Navideña | Ganador: Tamara Giraldo
+ | Premio: Audifonos Nivel: 3
+Rifa: Rifa Navideña | Ganador: Asier Vela
+ | Premio: Bocina Nivel: 2
+Rifa: Rifa Navideña | Ganador: Daniela Canto
+ | Premio: Celular Nivel: 1
+Proceso en ejecucion: 29/11/2022 02:46:34
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:47:45
+Rifa: Rifa Navideña | Ganador: Susana Gisbert
+ | Premio: Tarjeta Amazon Nivel: 4
+Rifa: Rifa Navideña | Ganador: Asier Vela
+ | Premio: Audifonos Nivel: 3
+Rifa: Rifa Navideña | Ganador: Tamara Giraldo
+ | Premio: Bocina Nivel: 2
+Rifa: Rifa Navideña | Ganador: Daniela Canto
+ | Premio: Celular Nivel: 1
+Proceso en ejecucion: 29/11/2022 02:48:45
+Proceso en ejecucion: 29/11/2022 02:49:45
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:51:22
+Proceso en ejecucion: 29/11/2022 02:52:22
+Rifa: Rifa Navideña | Ganador: Octavio Morall | Premio: Tarjeta Amazon Nivel: 4
+Rifa: Rifa Navideña | Ganador: Izan Urbano | Premio: Audifonos Nivel: 3
+Rifa: Rifa Navideña | Ganador: Daniela Canto | Premio: Bocina Nivel: 2
+Rifa: Rifa Navideña | Ganador: Susana Gisbert
+ | Premio: Celular Nivel: 1
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 02:53:07
+Proceso en ejecucion: 29/11/2022 02:54:07
+Rifa: Rifa Navideña | Ganador: Izan Urbano | Premio: Tarjeta Amazon Nivel: 4
+Rifa: Rifa Navideña | Ganador: Daniela Canto | Premio: Audifonos Nivel: 3
+Rifa: Rifa Navideña | Ganador: Tamara Giraldo | Premio: Bocina Nivel: 2
+Rifa: Rifa Navideña | Ganador: Asier Vela | Premio: Celular Nivel: 1
+Proceso en ejecucion: 29/11/2022 02:55:07
+Proceso en ejecucion: 29/11/2022 02:56:07
+Proceso en ejecucion: 29/11/2022 02:57:07
+Proceso en ejecucion: 29/11/2022 02:58:07
+Proceso en ejecucion: 29/11/2022 02:59:07
+Proceso en ejecucion: 29/11/2022 03:00:07
+Proceso en ejecucion: 29/11/2022 03:01:07
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:04:06
+Proceso en ejecucion: 29/11/2022 03:05:06
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:13:32
+Proceso en ejecucion: 29/11/2022 03:14:32
+Proceso en ejecucion: 29/11/2022 03:15:32
+Proceso en ejecucion: 29/11/2022 03:16:32
+Proceso en ejecucion: 29/11/2022 03:17:32
+Proceso en ejecucion: 29/11/2022 03:18:32
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:19:21
+Proceso en ejecucion: 29/11/2022 03:20:21
+Proceso en ejecucion: 29/11/2022 03:21:21
+Proceso en ejecucion: 29/11/2022 03:22:21
+Proceso en ejecucion: 29/11/2022 03:23:21
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:23:35
+Proceso en ejecucion: 29/11/2022 03:24:35
+Proceso en ejecucion: 29/11/2022 03:25:35
+Proceso en ejecucion: 29/11/2022 03:26:35
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:26:56
+Proceso en ejecucion: 29/11/2022 03:27:56
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:28:50
+Proceso en ejecucion: 29/11/2022 03:29:50
+Proceso en ejecucion: 29/11/2022 03:30:50
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:32:23
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:33:23
+Proceso en ejecucion: 29/11/2022 03:34:23
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:35:23
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:36:13
+Proceso en ejecucion: 29/11/2022 03:37:13
+Proceso en ejecucion: 29/11/2022 03:38:13
+Proceso en ejecucion: 29/11/2022 03:39:13
+Proceso en ejecucion: 29/11/2022 03:40:13
+Proceso en ejecucion: 29/11/2022 03:41:13
+Proceso en ejecucion: 29/11/2022 03:42:13
+Proceso en ejecucion: 29/11/2022 03:43:13
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:44:13
+Proceso en ejecucion: 29/11/2022 03:45:13
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:46:13
+Proceso en ejecucion: 29/11/2022 03:47:13
+Proceso en ejecucion: 29/11/2022 03:48:13
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:49:13
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 03:56:11
+Proceso en ejecucion: 29/11/2022 03:57:11
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:58:11
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 03:59:11
+Se inicio la aplicacion.
+Proceso en ejecucion: 29/11/2022 04:00:24
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 04:01:24
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 04:02:24
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 04:03:24
+Proceso en ejecucion: 29/11/2022 04:04:24
+Proceso en ejecucion: 29/11/2022 04:05:24
+Proceso en ejecucion: 29/11/2022 04:06:24
+Proceso en ejecucion: 29/11/2022 04:07:24
+Proceso en ejecucion: 29/11/2022 04:08:24
+Proceso en ejecucion: 29/11/2022 04:09:24
+Proceso en ejecucion: 29/11/2022 04:10:24
+Proceso en ejecucion: 29/11/2022 04:11:24
+Proceso en ejecucion: 29/11/2022 04:12:24
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.
+Proceso en ejecucion: 29/11/2022 04:13:24
+Se realizara un registro nuevo.
+Se realizo un registro de manera exitosa.

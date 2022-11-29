@@ -116,24 +116,5 @@ namespace WebApiCasino.Utilidades
             return resultado;
         }
 
-        //private List<Premios> MapCreacionRifa(CreacionRifaDTO creacionRifaDTO, Rifas rifa)
-        //{
-        //    var resultado = new List<Premios>();
-
-        //    if (creacionRifaDTO.Premios == null) { return resultado; }
-
-        //    foreach (var i in creacionRifaDTO.Premios)
-        //    {
-        //        resultado.Add(new Premios()
-        //        {
-        //            RifaId = rifa.Id,
-        //            Nombre = i.Nombre,
-        //            Nivel = i.Nivel
-
-        //        });
-        //    }
-
-        //    return resultado;
-        //}
     }
 }

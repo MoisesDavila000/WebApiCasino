@@ -109,7 +109,7 @@ namespace WebApiCasino
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //app.UseResponseHttpMiddleware();
+            app.UseResponseHttpMiddleware();
             if (env.IsDevelopment())
             {
                 app.UseSwagger();

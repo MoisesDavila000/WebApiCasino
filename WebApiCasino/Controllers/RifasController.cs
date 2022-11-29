@@ -27,7 +27,7 @@ namespace WebApiCasino.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet("Obtener_Premios_De_Rifa/Rifa/{id:int}", Name = "GetPremiosRifa")]
+        [HttpGet("Obtener_Rifa_Con_Premios/Rifa/{id:int}", Name = "GetPremiosRifa")]
         public async Task<ActionResult<RifaconPremiosDTO>> GetPremiosRifaId([FromRoute] int id)
         {
             var rifa = await dbContext.Rifas
@@ -39,8 +39,28 @@ namespace WebApiCasino.Controllers
                 return NotFound("No se encontro una rifa con el Id ingresado");
             }
 
+            List<GETPremiosDTO> listapremios = new List<GETPremiosDTO>();
+
+            foreach (var i in rifa.Premios)
+            {
+                listapremios.Add(new GETPremiosDTO
+                {
+                    Id = i.Id,
+                    Nombre = i.Nombre,
+                    Nivel = i.Nivel,
+                });
+            }
+
+            var rifapremio = new RifaconPremiosDTO()
+            {
+                Id = id,
+                Nombre = rifa.Nombre,
+                FechaRifa = rifa.FechaRifa,
+                PremiosDTO = listapremios
+            };
+
             logger.LogInformation("Se obtiene el listado de premios de una rifa.");
-            return mapper.Map<RifaconPremiosDTO>(rifa);
+            return mapper.Map<RifaconPremiosDTO>(rifapremio);
 
         }
 

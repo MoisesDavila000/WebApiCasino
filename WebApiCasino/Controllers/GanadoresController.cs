@@ -62,7 +62,6 @@ namespace WebApiCasino.Controllers
 
             var numganadores = rifa.Premios.Count();
 
-            Random random = new Random();
             List<CartasLoteMex> lista = new List<CartasLoteMex>();
             
             lista = service.EjecutarRandom(cartasUsadas, numganadores);
@@ -89,12 +88,14 @@ namespace WebApiCasino.Controllers
                     NombreRifa = rifa.Nombre,
                     Participante = new GETParticipantesDTO()
                     {
+                        Id = participante.Id,
                         Nombre = participante.Nombre,
                         Telefono = participante.Telefono,
                         Email = participante.Email
                     },
                     Premio = new GETPremiosDTO()
                     {
+                        Id = premioGanador.Id,
                         Nombre = premioGanador.Nombre,
                         Nivel = premioGanador.Nivel
                     }
